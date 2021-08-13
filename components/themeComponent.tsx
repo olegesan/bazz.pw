@@ -5,8 +5,8 @@ import {
   ColorModeProvider,
   useColorMode,
 } from "@chakra-ui/react";
-// import { customTheme } from "../gatsby-plugin-chakra-ui/theme";
-import { theme } from "@chakra-ui/react";
+
+import theme from "../utils/theme";
 import Layout from "./layout";
 import { Global, css } from "@emotion/react";
 
@@ -37,9 +37,7 @@ export default function TehemeComponent({ children }: Props) {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle>
-        <ColorModeProvider options={{ useSystemColorMode: true }} value="light">
-          <Layout>{children}</Layout>
-        </ColorModeProvider>
+        <Layout>{children}</Layout>
       </GlobalStyle>
     </ThemeProvider>
   );

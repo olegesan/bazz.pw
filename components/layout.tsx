@@ -1,6 +1,13 @@
 import React from "react";
-import { Flex, Box, useColorMode } from "@chakra-ui/react";
+import {
+  Flex,
+  Box,
+  useColorMode,
+  useColorModeValue,
+  Text,
+} from "@chakra-ui/react";
 import { css } from "@emotion/react";
+import { useEffect } from "react";
 
 // import Seo from "./seo";
 type Props = {
@@ -9,9 +16,8 @@ type Props = {
 
 export default function Layout({ children }: Props) {
   const { colorMode } = useColorMode();
-  const bgColor = { light: "gray.50", dark: "gray.700" };
-  const color = { light: "gray.700", dark: "gray.50" };
-
+  const bgColor = useColorModeValue("#F7FAFC", "#2D3748");
+  const color = useColorModeValue("#F7FAFC", "#2D3748");
   const styled = css`
     html: {
       background-color: ${colorMode == "light" ? "#F7FAFC" : "#2D3748"};
@@ -21,11 +27,8 @@ export default function Layout({ children }: Props) {
   return (
     <Box>
       {/* <Seo /> */}
-      <Flex
-        flexDir={["column", "column", "row"]}
-        bg={bgColor[colorMode]}
-        color={color[colorMode]}
-      >
+
+      <Flex flexDir={["column", "column", "row"]} bg={bgColor} color={color}>
         {children}
       </Flex>
     </Box>

@@ -8,13 +8,14 @@ import {
   Text,
   useColorMode,
   IconButton,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
 function ColorModeButton() {
   const { colorMode, toggleColorMode } = useColorMode();
-  const bgColor = { light: "gray.50", dark: "gray.700" };
-  const color = { light: "gray.700", dark: "gray.50" };
+  const bgColor = useColorModeValue("#F7FAFC", "#2D3748");
+  const color = useColorModeValue("gray.700", "gray.50");
   useEffect(() => {}, [colorMode]);
   const handleClick = () => {
     document
