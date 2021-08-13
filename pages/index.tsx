@@ -1,5 +1,6 @@
 import React from "react";
-import { Flex } from "@chakra-ui/react";
+import Link from "next/link";
+import { Flex, Text } from "@chakra-ui/react";
 import PersonalInfo from "../components/personal-info";
 import Skills from "../components/skills";
 // import Layout from "../components/layout-old"
@@ -15,13 +16,16 @@ const Home = () => {
     <TehemeComponent>
       <PersonalInfo />
       <div className="content">
-        <Flex flexDir="column">
-          <Skills />
-          <Projects />
-          <Experience />
-          <Hackathon />
-          <Certifications />
-        </Flex>
+        <Text color="black">
+          <ul>
+            <li>
+              <Link href="/resume">Resume</Link>
+            </li>
+            <li>
+              <Link href="/blog">Blog</Link>
+            </li>
+          </ul>
+        </Text>
       </div>
     </TehemeComponent>
   );
