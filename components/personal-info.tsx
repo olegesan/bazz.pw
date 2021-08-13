@@ -1,18 +1,17 @@
 import React, { useEffect, useState, useRef } from "react";
 import { ImGithub, ImLinkedin, ImMail } from "react-icons/im";
 import { BsMoon, BsSun } from "react-icons/bs";
-import Image from "next/image";
 import {
   Box,
   Flex,
   Text,
+  Image,
   useColorMode,
   ColorModeProvider,
 } from "@chakra-ui/react";
 import Icon from "./icon";
 import styled from "@emotion/styled";
 import ColorModeButton from "./coloModeButton";
-import avatarImg from "../images/avatar.png";
 
 const Avatar = styled(Image)`
   border-radius: 9999px;
@@ -60,7 +59,12 @@ export default function PersonalInfo() {
     >
       <Flex flexDir="column" align="center">
         <Box marginBottom="0" paddingTop="2">
-          <Avatar src={avatarImg} />
+          <Image
+            src={"/images/avatar.png"}
+            alt={"Oleg Bazylnikov's photo"}
+            boxSize={["150px", "180px", "", "", "250px"]}
+            borderRadius="full"
+          />
         </Box>
         <Text fontSize={["md", "md", "xl"]}>Oleg Bazylnikov</Text>
         <Text fontSize={["md", "md", "xl"]}>Software Engineer</Text>
