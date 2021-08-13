@@ -1,7 +1,14 @@
-import React from "react";
+import React, { EventHandler } from "react";
 import { Box, Link } from "@chakra-ui/react";
 
-export default function Icon({ as, href, color, onClick }) {
+type Props = {
+  as: any;
+  href: string;
+  color?: string;
+  onClick?: React.MouseEventHandler<HTMLElement>;
+};
+
+export default function Icon({ as, href, color, onClick }: Props) {
   return (
     <Link href={href}>
       <Box

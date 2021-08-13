@@ -7,23 +7,26 @@ import {
   ModalFooter,
   ModalBody,
   ModalCloseButton,
-  useDisclosure,
   Button,
   Text,
   Box,
   Heading,
   Image,
 } from "@chakra-ui/react";
-
-export default function ProjectModal({
-  children,
-  project,
-  isOpen,
-  onClose,
-  onOpen,
-}) {
+type Props = {
+  project: {
+    image: string;
+    title: string;
+    date: string;
+    stack: string;
+    description: string;
+  };
+  isOpen: boolean;
+  onClose: () => void;
+};
+export default function ProjectModal({ project, isOpen, onClose }: Props) {
   // const { isOpen, onOpen, onClose } = useDisclosure();
-  console.log(isOpen, onOpen, onClose);
+
   return (
     <Box>
       <Modal

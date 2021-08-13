@@ -10,7 +10,10 @@ import { theme } from "@chakra-ui/react";
 import Layout from "./layout";
 import { Global, css } from "@emotion/react";
 
-const GlobalStyle = ({ children }) => {
+type Props = {
+  children: React.ReactNode;
+};
+const GlobalStyle = ({ children }: Props) => {
   const { colorMode } = useColorMode();
   return (
     <>
@@ -30,7 +33,7 @@ const GlobalStyle = ({ children }) => {
     </>
   );
 };
-export default function TehemeComponent({ children }) {
+export default function TehemeComponent({ children }: Props) {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle>

@@ -4,7 +4,11 @@ import SubSection from "./subSection";
 import Description from "./description";
 import BuletPoints from "./buletpoints";
 
-export default function Experience({ children }) {
+type Props = {
+  children?: React.ReactNode;
+};
+
+export default function Experience(props: Props) {
   return (
     <Section title="Experience">
       <SubSection

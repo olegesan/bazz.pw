@@ -4,13 +4,21 @@ import Date from "./date";
 import Location from "./location";
 import { ImGithub } from "react-icons/im";
 
+type Props = {
+  children?: React.ReactNode;
+  title?: string;
+  date?: string;
+  location?: string;
+  github?: string;
+};
+
 export default function SubSection({
   children,
   title,
   date,
   location,
   github,
-}) {
+}: Props) {
   return (
     <Flex flexDir="column" marginY="3">
       <Flex flexDir={["column", "column", "row"]} align="baseline">

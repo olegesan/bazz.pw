@@ -1,6 +1,10 @@
 import React from "react";
 import { Text } from "@chakra-ui/react";
 
-export default function Description({ children }) {
+type Props = {
+  children?: React.ReactNode;
+};
+
+export default function Description({ children }: Props) {
   return <Text>{children}</Text>;
 }

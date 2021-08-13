@@ -21,9 +21,9 @@ export default function PersonalInfo() {
   useEffect(() => {
     console.log(colorMode);
   }, [colorMode]);
-  const trigger = useRef(null);
+  const trigger = useRef<HTMLDivElement>(null);
   const handleScroll = () => {
-    if (trigger.current != null) {
+    if (trigger != null && trigger.current != null) {
       if (trigger.current.getBoundingClientRect().top <= 0 && !isSticky) {
         setSticky(true);
       } else if (trigger.current.getBoundingClientRect().top > 0 && isSticky) {
@@ -47,7 +47,7 @@ export default function PersonalInfo() {
       h={["", "", "100vh"]}
       w={["", "", "4xl", "5xl", "6xl"]}
       marginTop={["2", "2", "0"]}
-      position={["", "", "sticky"]}
+      position={["inherit", "inherit", "sticky"]}
       top="0px"
       marginLeft={["", "16"]}
       marginRight={["", "16"]}

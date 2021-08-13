@@ -1,6 +1,13 @@
 import React from "react";
 import { Text } from "@chakra-ui/react";
-export default function Date({ children, date, marginBottom }) {
+
+type Props = {
+  children?: React.ReactNode;
+  date?: string;
+  marginBottom?: string;
+};
+
+export default function Date({ children, date, marginBottom }: Props) {
   return (
     <Text
       fontWeight={["500"]}

@@ -86,3 +86,4 @@
 // }
 
 // export default SEO
+export default () => {};

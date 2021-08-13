@@ -10,7 +10,16 @@ import {
 import Date from "./date";
 import ProjectModal from "./projectModal";
 
-export default function ProjectBox({ children, project }) {
+type Props = {
+  project: {
+    image: string;
+    title: string;
+    date: string;
+    stack: string;
+    description: string;
+  };
+};
+export default function ProjectBox({ project }: Props) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box
@@ -28,9 +37,9 @@ export default function ProjectBox({ children, project }) {
       <Heading>{project.title}</Heading>
       <Date>{project.date}</Date>
       <ProjectModal
-        onClick={onOpen}
+        // onClick={onOpen}
         isOpen={isOpen}
-        onOpen={onOpen}
+        // onOpen={onOpen}
         onClose={onClose}
         project={project}
       />

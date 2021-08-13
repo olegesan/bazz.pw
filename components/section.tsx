@@ -1,7 +1,12 @@
 import React from "react";
 import { Heading, Flex, Box, useColorMode } from "@chakra-ui/react";
 
-export default function Section({ children, title }) {
+type Props = {
+  children: React.ReactNode;
+  title: string;
+};
+
+export default function Section({ children, title }: Props) {
   const { colorMode } = useColorMode();
   const bgColor = { light: "gray.50", dark: "gray.700" };
   const color = { light: "gray.700", dark: "gray.50" };

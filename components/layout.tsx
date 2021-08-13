@@ -3,8 +3,11 @@ import { Flex, Box, useColorMode } from "@chakra-ui/react";
 import { css } from "@emotion/react";
 
 // import Seo from "./seo";
+type Props = {
+  children: React.ReactNode;
+};
 
-export default function Layout({ children }) {
+export default function Layout({ children }: Props) {
   const { colorMode } = useColorMode();
   const bgColor = { light: "gray.50", dark: "gray.700" };
   const color = { light: "gray.700", dark: "gray.50" };

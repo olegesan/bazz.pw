@@ -3,7 +3,7 @@ import Section from "./section";
 import SubSection from "./subSection";
 import Description from "./description";
 
-export default function Certifications({ children }) {
+export default function Certifications() {
   return (
     <Section title="Certifications">
       <SubSection

@@ -3,7 +3,7 @@ import Section from "./section";
 import SubSection from "./subSection";
 import Description from "./description";
 
-export default function Skills({ children }) {
+export default function Skills() {
   return (
     <Section title="Skills">
       <SubSection title="Frontend">

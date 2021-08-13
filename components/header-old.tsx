@@ -2,7 +2,11 @@ import Link from "next/link";
 import PropTypes from "prop-types";
 import React from "react";
 
-const Header = ({ siteTitle }) => (
+type Props = {
+  siteTitle: string;
+};
+
+const Header = ({ siteTitle }: Props) => (
   <header
     style={{
       background: `rebeccapurple`,
@@ -16,16 +20,8 @@ const Header = ({ siteTitle }) => (
         padding: `1.45rem 1.0875rem`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
+      <h1 style={{ margin: 0, color: `white`, textDecoration: `none` }}>
+        <Link href="/">{siteTitle}</Link>
       </h1>
     </div>
   </header>

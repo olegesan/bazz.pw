@@ -38,13 +38,13 @@ const projects = [
       "Nonumy erat diam voluptua sanctus ipsum ipsum. Diam diam justo labore tempor kasd at eirmod dolore. Amet ipsum vero sit.",
   },
 ];
-export default function Projects({ children }) {
+export default function Projects() {
   return (
     <Section title="Projects">
       <Flex wrap="wrap" flexDir="row" justify="space-around">
-        {projects.map((project) => {
+        {projects.map((project, idx) => {
           return (
-            <Box>
+            <Box key={idx}>
               <ProjectBox project={project} />
             </Box>
           );
