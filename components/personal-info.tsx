@@ -1,17 +1,23 @@
 import React, { useEffect, useState, useRef } from "react";
 import { ImGithub, ImLinkedin, ImMail } from "react-icons/im";
 import { BsMoon, BsSun } from "react-icons/bs";
+import Image from "next/image";
 import {
   Box,
   Flex,
-  Image,
   Text,
   useColorMode,
   ColorModeProvider,
 } from "@chakra-ui/react";
 import Icon from "./icon";
+import styled from "@emotion/styled";
 import ColorModeButton from "./coloModeButton";
-const avatarImg = require("../images/avatar.png");
+import avatarImg from "../images/avatar.png";
+
+const Avatar = styled(Image)`
+  border-radius: 9999px;
+`;
+
 export default function PersonalInfo() {
   const [isSticky, setSticky] = useState(false);
   const { colorMode, toggleColorMode } = useColorMode();
@@ -54,11 +60,7 @@ export default function PersonalInfo() {
     >
       <Flex flexDir="column" align="center">
         <Box marginBottom="0" paddingTop="2">
-          <Image
-            size={["150px", "180px", "", "", "250px"]}
-            borderRadius="9999px"
-            src={avatarImg}
-          />
+          <Avatar src={avatarImg} />
         </Box>
         <Text fontSize={["md", "md", "xl"]}>Oleg Bazylnikov</Text>
         <Text fontSize={["md", "md", "xl"]}>Software Engineer</Text>
