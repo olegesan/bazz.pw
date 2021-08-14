@@ -27,6 +27,11 @@ const GlobalStyle = ({ children }: Props) => {
           html {
             scroll-behavior: smooth;
           }
+          .mdx {
+            h1: {
+              fontsize: "xl";
+            }
+          }
         `}
       />
       {children}

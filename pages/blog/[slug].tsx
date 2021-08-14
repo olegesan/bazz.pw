@@ -4,6 +4,7 @@ import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import { getFileByslug, getFiles } from "../../utils/mdx";
 import { ParsedUrlQuery } from "querystring";
 import matter from "gray-matter";
+import MDXWrapper from "../../components/mdxWrapper";
 
 interface Props {
   mdxSource: MDXRemoteSerializeResult;
@@ -12,10 +13,9 @@ interface Props {
 
 export default function ExamplePage({ mdxSource }: Props) {
   return (
-    <>
-      <h1>help </h1>hello world too
+    <MDXWrapper>
       <MDXRemote {...mdxSource} />
-    </>
+    </MDXWrapper>
   );
 }
 export const getStaticPaths: GetStaticPaths = async () => {
