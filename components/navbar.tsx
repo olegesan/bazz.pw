@@ -17,20 +17,20 @@ export default function NavBar() {
       color={colorMode === "light" ? "light.font" : "dark.font"}
       zIndex="2"
     >
-      <Flex justifyContent="space-between" w="50%" m="5">
-        <Flex alignItems="center" justifyContent="space-around" width="35%">
+      <Flex justifyContent="space-between" w="75%" m="5">
+        <Flex alignItems="center">
           <Link href="/blog">
-            <Lnk>
+            <Lnk pr="5">
               <Text>Blog</Text>
             </Lnk>
           </Link>
           <Link href="/resume">
-            <Lnk>
+            <Lnk pr="5">
               <Text>Resume</Text>
             </Lnk>
           </Link>
           <Link href="/">
-            <Lnk>
+            <Lnk pr="5">
               <Text>Main</Text>
             </Lnk>
           </Link>

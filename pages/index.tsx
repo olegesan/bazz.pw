@@ -14,19 +14,9 @@ import { getFiles } from "../utils/mdx";
 
 const Home = () => {
   return (
-    <>
+    <Flex w="100%" justifyContent="center">
       <PersonalInfo />
-      <Box className="content" color="black">
-        <ul>
-          <li>
-            <Link href="/resume">Resume</Link>
-          </li>
-          <li>
-            <Link href="/blog">Blog</Link>
-          </li>
-        </ul>
-      </Box>
-    </>
+    </Flex>
   );
 };
 
