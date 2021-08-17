@@ -94,7 +94,7 @@ export default function PersonalInfo() {
               href="https://www.linkedin.com/in/oleg-bazylnikov/"
             />
             <Icon as={ImMail} href="mailto:oleg.bazylnikov@gmail.com" />
-            <ColorModeButton />
+            <ColorModeButton fontSize="20px" />
           </Flex>
         ) : null}
       </Flex>
