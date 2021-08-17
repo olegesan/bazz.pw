@@ -14,7 +14,7 @@ import { getFiles } from "../utils/mdx";
 
 const Home = () => {
   return (
-    <TehemeComponent>
+    <>
       <PersonalInfo />
       <Box className="content" color="black">
         <ul>
@@ -26,7 +26,7 @@ const Home = () => {
           </li>
         </ul>
       </Box>
-    </TehemeComponent>
+    </>
   );
 };
 

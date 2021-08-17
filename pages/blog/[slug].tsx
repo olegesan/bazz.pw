@@ -5,6 +5,7 @@ import { getFileByslug, getFiles } from "../../utils/mdx";
 import { ParsedUrlQuery } from "querystring";
 import matter from "gray-matter";
 import MDXWrapper from "../../components/mdxWrapper";
+import BlogLayout from "../../components/blogLayout";
 
 interface Props {
   mdxSource: MDXRemoteSerializeResult;
@@ -13,9 +14,11 @@ interface Props {
 
 export default function ExamplePage({ mdxSource }: Props) {
   return (
-    <MDXWrapper>
-      <MDXRemote {...mdxSource} />
-    </MDXWrapper>
+    <BlogLayout>
+      <MDXWrapper>
+        <MDXRemote {...mdxSource} />
+      </MDXWrapper>
+    </BlogLayout>
   );
 }
 export const getStaticPaths: GetStaticPaths = async () => {

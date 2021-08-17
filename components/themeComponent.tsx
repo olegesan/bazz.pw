@@ -41,9 +41,9 @@ const GlobalStyle = ({ children }: Props) => {
 export default function TehemeComponent({ children }: Props) {
   return (
     <ThemeProvider theme={theme}>
-      <GlobalStyle>
+      {/* <GlobalStyle> */}
         <Layout>{children}</Layout>
-      </GlobalStyle>
+      {/* </GlobalStyle> */}
     </ThemeProvider>
   );
 }
