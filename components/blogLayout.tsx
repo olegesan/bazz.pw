@@ -7,7 +7,7 @@ type Props = {
 export default function BlogLayout({ children }: Props) {
   return (
     <Flex mt="20" mb="20" justifyContent="space-around">
-      <Box w="50%">{children}</Box>
+      <Box w={["80%", "", "50%"]}>{children}</Box>
     </Flex>
   );
 }

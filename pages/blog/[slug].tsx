@@ -6,15 +6,30 @@ import { ParsedUrlQuery } from "querystring";
 import matter from "gray-matter";
 import MDXWrapper from "../../components/mdxWrapper";
 import BlogLayout from "../../components/blogLayout";
+import { Heading, Box } from "@chakra-ui/react";
 
 interface Props {
   mdxSource: MDXRemoteSerializeResult;
-  frontMatter: any;
+  frontMatter:
+    | {
+        author: string;
+        published_at: string;
+        title: string;
+        summary: string;
+      }
+    | any;
 }
 
-export default function ExamplePage({ mdxSource }: Props) {
+export default function BlogPostPage({
+  mdxSource,
+  frontMatter: { author, title, published_at },
+}: Props) {
   return (
     <BlogLayout>
+      <Heading size="2xl">{title}</Heading>
+      <Box mb="5">
+        By {author} on {published_at}
+      </Box>
       <MDXWrapper>
         <MDXRemote {...mdxSource} />
       </MDXWrapper>

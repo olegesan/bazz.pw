@@ -17,7 +17,7 @@ export default function NavBar() {
       color={colorMode === "light" ? "light.font" : "dark.font"}
       zIndex="2"
     >
-      <Flex justifyContent="space-between" w="75%" m="5">
+      <Flex justifyContent="space-between" w="75%" m={["2", "", "5"]}>
         <Flex alignItems="center">
           <Link href="/blog">
             <Lnk pr="5">

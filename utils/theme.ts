@@ -1,10 +1,5 @@
-import {
-  extendTheme,
-  ThemeConfig,
-  color,
-  useColorModeValue,
-} from "@chakra-ui/react";
-import React from "react";
+import { extendTheme, ThemeConfig } from "@chakra-ui/react";
+
 import { mode } from "@chakra-ui/theme-tools";
 /*
 sets default color mode theme
@@ -16,7 +11,10 @@ const config: ThemeConfig = {
 
 /*
  * update colors
- */ const colors = {
+ */
+const colors = {
+  /* define theme colors
+   */
   dark: {
     font: "#F7FAFC",
     bg: "#2D3748",
@@ -34,17 +32,20 @@ const styles = {
   global: (props: any) => ({
     ".mdx": {
       h1: {
-        fontSize: "3xl",
+        fontSize: "4xl",
+        fontWeight: "700",
         mb: 4,
       },
       h2: {
-        fontSize: "xl",
+        fontSize: "3xl",
+        fontWeight: "700",
         mb: 3,
       },
-      h3: { fontSize: "lg", mb: 2 },
+      h3: { fontSize: "2xl", mb: 2 },
       p: {
-        fontsize: "sm",
+        fontSize: "lg",
         lineHeight: "1.4",
+        mb: 2,
       },
     },
     body: {
