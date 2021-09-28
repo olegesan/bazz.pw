@@ -11,20 +11,20 @@ import TehemeComponent from "../components/themeComponent";
 import Certifications from "../components/certifications";
 
 const Home = () => {
-  return (
-    <TehemeComponent>
-      <PersonalInfo />
-      <div className="content">
-        <Flex flexDir="column">
-          <Skills />
-          <Projects />
-          <Experience />
-          <Hackathon />
-          <Certifications />
-        </Flex>
-      </div>
-    </TehemeComponent>
-  );
+    return (
+        <TehemeComponent>
+            <PersonalInfo />
+            <div className="content">
+                <Flex flexDir="column">
+                    <Skills />
+                    <Experience />
+                    <Projects />
+                    <Hackathon />
+                    <Certifications />
+                </Flex>
+            </div>
+        </TehemeComponent>
+    );
 };
 
 export default Home;
